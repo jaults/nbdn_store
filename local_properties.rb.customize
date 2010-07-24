@@ -15,11 +15,11 @@ class LocalSettings
   	:debug => "TRUE"
 
   }
-@settings[:sql_tools_path] = File.join(ENV['SystemDrive'],'program files','microsoft sql server','100','tools','binn')
-@settings[:osql_exe] = File.join("#{@settings[:sql_tools_path]}",'osql.exe')
-@settings[:config_connectionstring] = "data source=(local);Integrated Security=SSPI;Initial Catalog=#{@settings[:initial_catalog]}"
+#@settings[:sql_tools_path] = File.join(ENV['SystemDrive'],'program files','microsoft sql server','100','tools','binn')
+#@settings[:osql_exe] = File.join("#{@settings[:sql_tools_path]}",'osql.exe')
+#@settings[:config_connectionstring] = "data source=(local);Integrated Security=SSPI;Initial Catalog=#{@settings[:initial_catalog]}"
 #@settings[:db_account_sql]= "#{@settings[:asp_net_account]} WITH PASSWORD=N'#{@settings[:asp_net_account]}', DEFAULT_DATABASE=[master], DEFAULT_LANGUAGE=[us_english], CHECK_EXPIRATION=OFF, CHECK_POLICY=OFF")
-@settings[:asp_net_account] = "#{ENV["computername"]}\\ASPNet";
-@settings[:db_account_sql] = "#{@settings[:asp_net_account]}', N'#{@settings[:asp_net_account]}'"
+#@settings[:asp_net_account] = "#{ENV["computername"]}\\ASPNet";
+#@settings[:db_account_sql] = "#{@settings[:asp_net_account]}', N'#{@settings[:asp_net_account]}'"
  end
 end
