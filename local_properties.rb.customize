@@ -11,6 +11,7 @@ class LocalSettings
   	:database_provider => "System.Data.SqlClient" ,
   	:database_path => "C:\\databases" ,
   	:log_file_name => "#{Project.name}_log.txt",
+  	:our_custom_value => "Please change this",
   	:log_level => "DEBUG",
   	:debug => "TRUE"
 

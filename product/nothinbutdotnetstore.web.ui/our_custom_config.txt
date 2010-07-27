@@ -1,0 +1,5 @@
+This is our custom config
+
+and the log level is set to
+
+: This is cool
