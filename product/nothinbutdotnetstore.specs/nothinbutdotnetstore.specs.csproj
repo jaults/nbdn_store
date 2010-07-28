@@ -78,6 +78,8 @@
   <ItemGroup>
     <Compile Include="example\CalculatorSpecs.cs" />
     <Compile Include="MessageGeneratorSpecs.cs" />
+    <Compile Include="utility\ObjectMother.cs" />
+    <Compile Include="web\FrontControllerSpecs.cs" />
     <Compile Include="web\RawHandlerSpecs.cs" />
   </ItemGroup>
   <ItemGroup>
