@@ -11,7 +11,7 @@ namespace nothinbutdotnetstore.web.core.stubs
         {
             HttpContext.Current.Items.Add("blah", model);
 
-            if (typeof(DisplayModel) is IEnumerable<Product>)
+            if (typeof(DisplayModel).FullName.Contains("Product"))
                 HttpContext.Current.Server.Transfer("~/views/ProductBrowser.aspx", true);
 
             HttpContext.Current.Server.Transfer("~/views/DepartmentBrowser.aspx", true);
