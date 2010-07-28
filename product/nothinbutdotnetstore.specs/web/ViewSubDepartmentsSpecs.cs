@@ -9,14 +9,14 @@ using Rhino.Mocks;
 
 namespace nothinbutdotnetstore.specs.web
 {
-    public class ViewSubDpartmentsInADepartmentSpecs
+    public class ViewSubDepartmentsInADepartmentSpecs
     {
         public abstract class concern : Observes<ApplicationCommand,
                                             ViewSubDepartmentsInADepartment>
         {
         }
 
-        [Subject(typeof(ViewSubDpartmentsInADepartmentSpecs))]
+        [Subject(typeof(ViewSubDepartmentsInADepartmentSpecs))]
         public class when_viewing_the_sub_departments_in_a_main_department : concern
         {
             Establish c = () =>
@@ -24,11 +24,11 @@ namespace nothinbutdotnetstore.specs.web
                 request = an<Request>();
                 response_engine = the_dependency<ResponseEngine>();
 
-                deparments_repository = the_dependency<DeparmentsRepository>();
+                catalog_browsing_tasks = the_dependency<CatalogBrowsingTasks>();
                 sub_departments = new List<Department>();
                 main_department = new Department();
                 request.Stub(x => x.map<Department>()).Return(main_department);
-                deparments_repository.Stub(x => x.get_the_sub_departments_in(main_department)).Return(sub_departments);
+                catalog_browsing_tasks.Stub(x => x.get_the_sub_departments_in(main_department)).Return(sub_departments);
             };
 
             Because b = () =>
@@ -39,7 +39,7 @@ namespace nothinbutdotnetstore.specs.web
   
 
             static Request request;
-            static DeparmentsRepository deparments_repository;
+            static CatalogBrowsingTasks catalog_browsing_tasks;
             static ResponseEngine response_engine;
             static IEnumerable<Department> sub_departments;
             static Department main_department;

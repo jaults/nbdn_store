@@ -8,9 +8,9 @@ namespace nothinbutdotnetstore.web.application.catalogbrowsing
     public class ViewProductsInADepartment : ApplicationCommand
     {
         ResponseEngine response_engine;
-        ProductRepository repository;
+        CatalogBrowsingTasks repository;
 
-        public ViewProductsInADepartment(ResponseEngine responseEngine, ProductRepository repository)
+        public ViewProductsInADepartment(ResponseEngine responseEngine, CatalogBrowsingTasks repository)
         {
             response_engine = responseEngine;
             this.repository = repository;

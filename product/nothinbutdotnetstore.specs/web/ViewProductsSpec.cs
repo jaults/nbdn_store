@@ -12,26 +12,26 @@ using Rhino.Mocks;
 
 namespace nothinbutdotnetstore.specs.web
 {
-    public class ViewProductsIADepartmentSpec
+    public class ViewProductsInADepartmentSpecs
     {
         public abstract class concern : Observes<ApplicationCommand,
                                             ViewProductsInADepartment>
         {
         }
 
-        [Subject(typeof(ViewSubDpartmentsInADepartmentSpecs))]
+        [Subject(typeof(ViewProductsInADepartment))]
         public class when_viewing_the_products_in_a_department : concern
         {
             Establish c = () =>
             {
                 request = an<Request>();
                 response_engine = the_dependency<ResponseEngine>();
-                products_repository = the_dependency<ProductRepository>();
+                catalog_browsing_tasks = the_dependency<CatalogBrowsingTasks>();
 
                 products = new List<Product>();
-                Department department = new Department();
+                var department = new Department();
 
-                products_repository.Stub(x => x.get_products_for_department(department)).Return((products));
+                catalog_browsing_tasks.Stub(x => x.get_products_for_department(department)).Return((products));
                 request.Stub(x => x.map<Department>()).Return(department);
             };
 
@@ -43,7 +43,7 @@ namespace nothinbutdotnetstore.specs.web
 
             static ResponseEngine response_engine;
             static Request request;
-            static ProductRepository products_repository;
+            static CatalogBrowsingTasks catalog_browsing_tasks;
             static IEnumerable<Product> products;
         }
     }

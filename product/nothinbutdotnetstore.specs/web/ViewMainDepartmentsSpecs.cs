@@ -24,10 +24,10 @@ namespace nothinbutdotnetstore.specs.web
                 request = an<Request>();
                 response_engine = the_dependency<ResponseEngine>();
 
-                deparments_repository = the_dependency<DeparmentsRepository>();
+                catalog_browsing_tasks = the_dependency<CatalogBrowsingTasks>();
                 main_departments = new List<Department>();
 
-                deparments_repository.Stub(x => x.get_the_main_departments()).Return(main_departments);
+                catalog_browsing_tasks.Stub(x => x.get_the_main_departments()).Return(main_departments);
             };
 
             Because b = () =>
@@ -38,7 +38,7 @@ namespace nothinbutdotnetstore.specs.web
   
 
             static Request request;
-            static DeparmentsRepository deparments_repository;
+            static CatalogBrowsingTasks catalog_browsing_tasks;
             static ResponseEngine response_engine;
             static IEnumerable<Department> main_departments;
         }

@@ -8,7 +8,7 @@ namespace nothinbutdotnetstore.web.application.catalogbrowsing
 {
     public class ViewSubDepartmentsInADepartment : ApplicationCommand
     {
-        DeparmentsRepository deparments_repository;
+        CatalogBrowsingTasks catalog_browsing_tasks;
         ResponseEngine response_engine;
 
         public ViewSubDepartmentsInADepartment()
@@ -16,16 +16,16 @@ namespace nothinbutdotnetstore.web.application.catalogbrowsing
         {
         }
 
-        public ViewSubDepartmentsInADepartment(DeparmentsRepository deparmentsRepository, ResponseEngine response_engine)
+        public ViewSubDepartmentsInADepartment(CatalogBrowsingTasks catalog_browsing_tasks, ResponseEngine response_engine)
         {
-            this.deparments_repository = deparmentsRepository;
+            this.catalog_browsing_tasks = catalog_browsing_tasks;
             this.response_engine = response_engine;
 
         }
 
         public void process(Request request)
         {
-            response_engine.display(deparments_repository.get_the_sub_departments_in(request.map<Department>()));
+            response_engine.display(catalog_browsing_tasks.get_the_sub_departments_in(request.map<Department>()));
         }
     }
 }
