@@ -5,9 +5,16 @@ namespace nothinbutdotnetstore.web.application.catalogbrowsing
 {
     public class ViewMainDepartments: ApplicationCommand
     {
+        private IDeparmentsRepository deparmentsRepository;
+
+        public ViewMainDepartments(IDeparmentsRepository deparmentsRepository)
+        {
+            this.deparmentsRepository = deparmentsRepository;
+        }
+
         public void process(Request request)
         {
-            throw new NotImplementedException();
+            deparmentsRepository.GetAllDeparments();
         }
     }
 }
