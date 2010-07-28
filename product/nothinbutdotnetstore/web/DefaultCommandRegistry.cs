@@ -15,7 +15,7 @@ namespace nothinbutdotnetstore.web
 
         public RequestCommand get_command_that_can_handle(Request request)
         {
-            return commands.Single(command => command.can_process(request));
+            return commands.First(command => command.can_process(request));
         }
     }
 }
