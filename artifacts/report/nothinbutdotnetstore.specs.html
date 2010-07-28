@@ -115,10 +115,10 @@ div.supplement {
     nothinbutdotnetstore.specs
 </h1>
 <h2 class="count">
-  2 concerns,
-  5 contexts,
-  7 specifications,
-    <span class="failure">5 failures</span>
+  3 concerns,
+  7 contexts,
+  9 specifications,
+    <span class="failure">6 failures</span>
 </h2>
 
   <hr/>
@@ -127,7 +127,7 @@ div.supplement {
    specifications
 </h2>
 <h3 class="count">
-  4 contexts, 6 specifications
+  5 contexts, 7 specifications
 </h3><h3 class="context">
   when a message is sent
 </h3>
@@ -344,6 +344,19 @@ div.supplement {
 
           </li>
         </ul><h3 class="context">
+  when determining if it can be reused
+</h3>
+<h4 class="count">
+  1 specification
+</h4><ul><li class="spec"><a name="8">should always be reusable</a>
+
+
+
+
+ 
+
+          </li>
+        </ul><h3 class="context">
   when shutting off the calculator and they are  in the correct role
 </h3>
 <h4 class="count">
@@ -420,7 +433,7 @@ div.supplement {
     <ul class="prev-next">
       <li class="failure"><a href="#2" title="Go to previous failed specification">&uArr;</a>
       </li>
-      <li class="failure">
+      <li class="failure"><a href="#7" title="Go to next failed specification">&dArr;</a>
       </li>
     </ul>
   </div>
@@ -474,6 +487,50 @@ div.supplement {
 
           </li>
         </ul><h2 class="concern">
+  DefaultFrontController specifications
+</h2>
+<h3 class="count">
+  1 context, 1 specification
+</h3><h3 class="context">
+  when processing a request
+</h3>
+<h4 class="count">
+  1 specification
+</h4><ul><li class="spec"><a name="7">should delegate processing to the command for the request</a>
+
+  <div class="failure">
+    &lArr; FAILED
+    <ul class="prev-next">
+      <li class="failure"><a href="#3" title="Go to previous failed specification">&uArr;</a>
+      </li>
+      <li class="failure">
+      </li>
+    </ul>
+  </div>
+  <p class="exception_type">
+    TargetInvocationException
+  </p>
+  <pre class="exception_message">System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---&gt; System.NotImplementedException: The method or operation is not implemented.
+   at nothinbutdotnetstore.web.DefaultFrontController.process(Request request) in c:\Users\jp\repositories\github\nbdn_store\product\nothinbutdotnetstore\web\DefaultFrontController.cs:line 9
+   at nothinbutdotnetstore.specs.web.FrontControllerSpecs.when_processing_a_request.&lt;.ctor&gt;b__2() in c:\Users\jp\repositories\github\nbdn_store\product\nothinbutdotnetstore.specs\web\FrontControllerSpecs.cs:line 29
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle._InvokeMethodFast(Object target, Object[] arguments, SignatureStruct&amp; sig, MethodAttributes methodAttributes, RuntimeTypeHandle typeOwner)
+   at System.RuntimeMethodHandle.InvokeMethodFast(Object target, Object[] arguments, Signature sig, MethodAttributes methodAttributes, RuntimeTypeHandle typeOwner)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture, Boolean skipVisibilityChecks)
+   at System.Delegate.DynamicInvokeImpl(Object[] args)
+   at System.Delegate.DynamicInvoke(Object[] args)
+   at Machine.Specifications.Utility.RandomExtensionMethods.&lt;InvokeAll&gt;b__1(Delegate item) in c:\Users\jp\repositories\github\machine.specifications\Source\Machine.Specifications\Utility\RandomExtensionMethods.cs:line 32
+   at Machine.Specifications.Utility.RandomExtensionMethods.Each[T](IEnumerable`1 enumerable, Action`1 action) in c:\Users\jp\repositories\github\machine.specifications\Source\Machine.Specifications\Utility\RandomExtensionMethods.cs:line 12
+   at Machine.Specifications.Utility.RandomExtensionMethods.InvokeAll(IEnumerable`1 actions) in c:\Users\jp\repositories\github\machine.specifications\Source\Machine.Specifications\Utility\RandomExtensionMethods.cs:line 32
+   at Machine.Specifications.Utility.RandomExtensionMethods.InvokeAll(IEnumerable`1 becauseActions) in c:\Users\jp\repositories\github\machine.specifications\Source\Machine.Specifications\Utility\RandomExtensionMethods.cs:line 17
+   at Machine.Specifications.Model.Context.EstablishContext() in c:\Users\jp\repositories\github\machine.specifications\Source\Machine.Specifications\Model\Context.cs:line 77</pre>
+
+
+
+ 
+
+          </li>
+        </ul><h2 class="concern">
   RawHandler specifications
 </h2>
 <h3 class="count">
@@ -483,7 +540,7 @@ div.supplement {
 </h3>
 <h4 class="count">
   1 specification
-</h4><ul><li class="spec"><a name="7">should delegate the processing of the request to the front controller</a>
+</h4><ul><li class="spec"><a name="9">should delegate the processing of the request to the front controller</a>
 
 
 
