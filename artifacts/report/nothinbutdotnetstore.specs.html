@@ -107,18 +107,15 @@ div.supplement {
   </style>
 </head>
 <body>
-  <ul class="prev-next"><li class="failure">
-      <a href="#4">Go to first failed specification &dArr;</a>
-    </li>
+  <ul class="prev-next">
   </ul>
 <h1>
     nothinbutdotnetstore.specs
 </h1>
 <h2 class="count">
-  3 concerns,
-  7 contexts,
-  9 specifications,
-    <span class="failure">6 failures</span>
+  7 concerns,
+  13 contexts,
+  15 specifications
 </h2>
 
   <hr/>
@@ -127,7 +124,7 @@ div.supplement {
    specifications
 </h2>
 <h3 class="count">
-  5 contexts, 7 specifications
+  6 contexts, 8 specifications
 </h3><h3 class="context">
   when a message is sent
 </h3>
@@ -164,59 +161,6 @@ div.supplement {
   3 specifications
 </h4><ul><li class="spec"><a name="4">should return the sum of the numbers</a>
 
-  <div class="failure">
-    &lArr; FAILED
-    <ul class="prev-next">
-      <li class="failure">
-      </li>
-      <li class="failure"><a href="#5" title="Go to next failed specification">&dArr;</a>
-      </li>
-    </ul>
-  </div>
-  <p class="exception_type">
-    TargetInvocationException
-  </p>
-  <pre class="exception_message">System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---&gt; System.ArgumentException: Unable to obtain public key for StrongNameKeyPair.
-   at System.Reflection.StrongNameKeyPair.nGetPublicKey(Boolean exported, Byte[] array, String container)
-   at System.Reflection.StrongNameKeyPair.get_PublicKey()
-   at System.AppDomain.InternalDefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access, String dir, Evidence evidence, PermissionSet requiredPermissions, PermissionSet optionalPermissions, PermissionSet refusedPermissions, StackCrawlMark&amp; stackMark, IEnumerable`1 unsafeAssemblyAttributes)
-   at System.AppDomain.DefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access)
-   at Castle.DynamicProxy.ModuleScope.CreateModule(Boolean signStrongName)
-   at Castle.DynamicProxy.ModuleScope.ObtainDynamicModuleWithStrongName()
-   at Castle.DynamicProxy.ModuleScope.ObtainDynamicModule(Boolean isStrongNamed)
-   at Castle.DynamicProxy.Generators.Emitters.ClassEmitter.CreateTypeBuilder(ModuleScope modulescope, String name, Type baseType, Type[] interfaces, TypeAttributes flags, Boolean forceUnsigned)
-   at Castle.DynamicProxy.Generators.Emitters.ClassEmitter..ctor(ModuleScope modulescope, String name, Type baseType, Type[] interfaces, TypeAttributes flags, Boolean forceUnsigned)
-   at Castle.DynamicProxy.Generators.Emitters.ClassEmitter..ctor(ModuleScope modulescope, String name, Type baseType, Type[] interfaces, TypeAttributes flags)
-   at Castle.DynamicProxy.Generators.Emitters.ClassEmitter..ctor(ModuleScope modulescope, String name, Type baseType, Type[] interfaces)
-   at Castle.DynamicProxy.Generators.BaseProxyGenerator.BuildClassEmitter(String typeName, Type parentType, Type[] interfaces)
-   at Castle.DynamicProxy.Generators.BaseProxyGenerator.BuildClassEmitter(String typeName, Type parentType, IList interfaceList)
-   at Castle.DynamicProxy.Generators.InterfaceProxyWithTargetGenerator.GenerateCode(Type proxyTargetType, Type[] interfaces, ProxyGenerationOptions options)
-   at Castle.DynamicProxy.DefaultProxyBuilder.CreateInterfaceProxyTypeWithoutTarget(Type interfaceToProxy, Type[] additionalInterfacesToProxy, ProxyGenerationOptions options)
-   at Castle.DynamicProxy.ProxyGenerator.CreateInterfaceProxyTypeWithoutTarget(Type interfaceToProxy, Type[] additionalInterfacesToProxy, ProxyGenerationOptions options)
-   at Castle.DynamicProxy.ProxyGenerator.CreateInterfaceProxyWithoutTarget(Type interfaceToProxy, Type[] additionalInterfacesToProxy, ProxyGenerationOptions options, IInterceptor[] interceptors)
-   at Rhino.Mocks.MockRepository.MockInterface(CreateMockState mockStateFactory, Type type, Type[] extras)
-   at Rhino.Mocks.MockRepository.CreateMockObject(Type type, CreateMockState factory, Type[] extras, Object[] argumentsForConstructor)
-   at Rhino.Mocks.MockRepository.Stub(Type type, Object[] argumentsForConstructor)
-   at Rhino.Mocks.MockRepository.&lt;&gt;c__DisplayClass1`1.&lt;GenerateStub&gt;b__0(MockRepository repo)
-   at Rhino.Mocks.MockRepository.CreateMockInReplay[T](Func`2 createMock)
-   at Rhino.Mocks.MockRepository.GenerateStub[T](Object[] argumentsForConstructor)
-   at Machine.Specifications.DevelopWithPassion.Rhino.RhinoMocksMockFactory.create_stub[Dependency]() in c:\Users\jp\repositories\github\machine.specifications\Source\Machine.Specifications.DevelopWithPassion.Rhino\RhinoMocksMockFactory.cs:line 10
-   at Machine.Specifications.DevelopWithPassion.DefaultSystemUnterTestDependencyBuilder.the_dependency[Dependency]() in c:\Users\jp\repositories\github\machine.specifications\Source\Machine.Specifications.DevelopWithPassion\SystemUnderTestDependencyBuilder.cs:line 47
-   at Machine.Specifications.DevelopWithPassion.Observations.DefaultObservationContext`1.the_dependency[Dependency]() in c:\Users\jp\repositories\github\machine.specifications\Source\Machine.Specifications.DevelopWithPassion\Observations\ObservationContext.cs:line 110
-   at Machine.Specifications.DevelopWithPassion.Observations.DefaultObservationController`3.the_dependency[Dependency]() in c:\Users\jp\repositories\github\machine.specifications\Source\Machine.Specifications.DevelopWithPassion\Observations\ObservationController.cs:line 83
-   at Machine.Specifications.DevelopWithPassion.Observations.InstanceObservations`3.the_dependency[Dependency]() in c:\Users\jp\repositories\github\machine.specifications\Source\Machine.Specifications.DevelopWithPassion\Observations\InstanceObservations.cs:line 10
-   at nothinbutdotnetstore.specs.example.CalculatorSpecs.when_adding_two_numbers.&lt;.ctor&gt;b__12() in c:\Users\jp\repositories\github\nbdn_store\product\nothinbutdotnetstore.specs\example\CalculatorSpecs.cs:line 64
-   --- End of inner exception stack trace ---
-   at System.RuntimeMethodHandle._InvokeMethodFast(Object target, Object[] arguments, SignatureStruct&amp; sig, MethodAttributes methodAttributes, RuntimeTypeHandle typeOwner)
-   at System.RuntimeMethodHandle.InvokeMethodFast(Object target, Object[] arguments, Signature sig, MethodAttributes methodAttributes, RuntimeTypeHandle typeOwner)
-   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture, Boolean skipVisibilityChecks)
-   at System.Delegate.DynamicInvokeImpl(Object[] args)
-   at System.Delegate.DynamicInvoke(Object[] args)
-   at Machine.Specifications.Utility.RandomExtensionMethods.&lt;InvokeAll&gt;b__1(Delegate item) in c:\Users\jp\repositories\github\machine.specifications\Source\Machine.Specifications\Utility\RandomExtensionMethods.cs:line 32
-   at Machine.Specifications.Utility.RandomExtensionMethods.Each[T](IEnumerable`1 enumerable, Action`1 action) in c:\Users\jp\repositories\github\machine.specifications\Source\Machine.Specifications\Utility\RandomExtensionMethods.cs:line 12
-   at Machine.Specifications.Utility.RandomExtensionMethods.InvokeAll(IEnumerable`1 actions) in c:\Users\jp\repositories\github\machine.specifications\Source\Machine.Specifications\Utility\RandomExtensionMethods.cs:line 32
-   at Machine.Specifications.Utility.RandomExtensionMethods.InvokeAll(IEnumerable`1 contextActions) in c:\Users\jp\repositories\github\machine.specifications\Source\Machine.Specifications\Utility\RandomExtensionMethods.cs:line 22
-   at Machine.Specifications.Model.Context.EstablishContext() in c:\Users\jp\repositories\github\machine.specifications\Source\Machine.Specifications\Model\Context.cs:line 76</pre>
 
 
 
@@ -224,59 +168,6 @@ div.supplement {
 
           </li><li class="spec"><a name="5">should open a connection to the database</a>
 
-  <div class="failure">
-    &lArr; FAILED
-    <ul class="prev-next">
-      <li class="failure"><a href="#4" title="Go to previous failed specification">&uArr;</a>
-      </li>
-      <li class="failure"><a href="#6" title="Go to next failed specification">&dArr;</a>
-      </li>
-    </ul>
-  </div>
-  <p class="exception_type">
-    TargetInvocationException
-  </p>
-  <pre class="exception_message">System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---&gt; System.ArgumentException: Unable to obtain public key for StrongNameKeyPair.
-   at System.Reflection.StrongNameKeyPair.nGetPublicKey(Boolean exported, Byte[] array, String container)
-   at System.Reflection.StrongNameKeyPair.get_PublicKey()
-   at System.AppDomain.InternalDefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access, String dir, Evidence evidence, PermissionSet requiredPermissions, PermissionSet optionalPermissions, PermissionSet refusedPermissions, StackCrawlMark&amp; stackMark, IEnumerable`1 unsafeAssemblyAttributes)
-   at System.AppDomain.DefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access)
-   at Castle.DynamicProxy.ModuleScope.CreateModule(Boolean signStrongName)
-   at Castle.DynamicProxy.ModuleScope.ObtainDynamicModuleWithStrongName()
-   at Castle.DynamicProxy.ModuleScope.ObtainDynamicModule(Boolean isStrongNamed)
-   at Castle.DynamicProxy.Generators.Emitters.ClassEmitter.CreateTypeBuilder(ModuleScope modulescope, String name, Type baseType, Type[] interfaces, TypeAttributes flags, Boolean forceUnsigned)
-   at Castle.DynamicProxy.Generators.Emitters.ClassEmitter..ctor(ModuleScope modulescope, String name, Type baseType, Type[] interfaces, TypeAttributes flags, Boolean forceUnsigned)
-   at Castle.DynamicProxy.Generators.Emitters.ClassEmitter..ctor(ModuleScope modulescope, String name, Type baseType, Type[] interfaces, TypeAttributes flags)
-   at Castle.DynamicProxy.Generators.Emitters.ClassEmitter..ctor(ModuleScope modulescope, String name, Type baseType, Type[] interfaces)
-   at Castle.DynamicProxy.Generators.BaseProxyGenerator.BuildClassEmitter(String typeName, Type parentType, Type[] interfaces)
-   at Castle.DynamicProxy.Generators.BaseProxyGenerator.BuildClassEmitter(String typeName, Type parentType, IList interfaceList)
-   at Castle.DynamicProxy.Generators.InterfaceProxyWithTargetGenerator.GenerateCode(Type proxyTargetType, Type[] interfaces, ProxyGenerationOptions options)
-   at Castle.DynamicProxy.DefaultProxyBuilder.CreateInterfaceProxyTypeWithoutTarget(Type interfaceToProxy, Type[] additionalInterfacesToProxy, ProxyGenerationOptions options)
-   at Castle.DynamicProxy.ProxyGenerator.CreateInterfaceProxyTypeWithoutTarget(Type interfaceToProxy, Type[] additionalInterfacesToProxy, ProxyGenerationOptions options)
-   at Castle.DynamicProxy.ProxyGenerator.CreateInterfaceProxyWithoutTarget(Type interfaceToProxy, Type[] additionalInterfacesToProxy, ProxyGenerationOptions options, IInterceptor[] interceptors)
-   at Rhino.Mocks.MockRepository.MockInterface(CreateMockState mockStateFactory, Type type, Type[] extras)
-   at Rhino.Mocks.MockRepository.CreateMockObject(Type type, CreateMockState factory, Type[] extras, Object[] argumentsForConstructor)
-   at Rhino.Mocks.MockRepository.Stub(Type type, Object[] argumentsForConstructor)
-   at Rhino.Mocks.MockRepository.&lt;&gt;c__DisplayClass1`1.&lt;GenerateStub&gt;b__0(MockRepository repo)
-   at Rhino.Mocks.MockRepository.CreateMockInReplay[T](Func`2 createMock)
-   at Rhino.Mocks.MockRepository.GenerateStub[T](Object[] argumentsForConstructor)
-   at Machine.Specifications.DevelopWithPassion.Rhino.RhinoMocksMockFactory.create_stub[Dependency]() in c:\Users\jp\repositories\github\machine.specifications\Source\Machine.Specifications.DevelopWithPassion.Rhino\RhinoMocksMockFactory.cs:line 10
-   at Machine.Specifications.DevelopWithPassion.DefaultSystemUnterTestDependencyBuilder.the_dependency[Dependency]() in c:\Users\jp\repositories\github\machine.specifications\Source\Machine.Specifications.DevelopWithPassion\SystemUnderTestDependencyBuilder.cs:line 47
-   at Machine.Specifications.DevelopWithPassion.Observations.DefaultObservationContext`1.the_dependency[Dependency]() in c:\Users\jp\repositories\github\machine.specifications\Source\Machine.Specifications.DevelopWithPassion\Observations\ObservationContext.cs:line 110
-   at Machine.Specifications.DevelopWithPassion.Observations.DefaultObservationController`3.the_dependency[Dependency]() in c:\Users\jp\repositories\github\machine.specifications\Source\Machine.Specifications.DevelopWithPassion\Observations\ObservationController.cs:line 83
-   at Machine.Specifications.DevelopWithPassion.Observations.InstanceObservations`3.the_dependency[Dependency]() in c:\Users\jp\repositories\github\machine.specifications\Source\Machine.Specifications.DevelopWithPassion\Observations\InstanceObservations.cs:line 10
-   at nothinbutdotnetstore.specs.example.CalculatorSpecs.when_adding_two_numbers.&lt;.ctor&gt;b__12() in c:\Users\jp\repositories\github\nbdn_store\product\nothinbutdotnetstore.specs\example\CalculatorSpecs.cs:line 64
-   --- End of inner exception stack trace ---
-   at System.RuntimeMethodHandle._InvokeMethodFast(Object target, Object[] arguments, SignatureStruct&amp; sig, MethodAttributes methodAttributes, RuntimeTypeHandle typeOwner)
-   at System.RuntimeMethodHandle.InvokeMethodFast(Object target, Object[] arguments, Signature sig, MethodAttributes methodAttributes, RuntimeTypeHandle typeOwner)
-   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture, Boolean skipVisibilityChecks)
-   at System.Delegate.DynamicInvokeImpl(Object[] args)
-   at System.Delegate.DynamicInvoke(Object[] args)
-   at Machine.Specifications.Utility.RandomExtensionMethods.&lt;InvokeAll&gt;b__1(Delegate item) in c:\Users\jp\repositories\github\machine.specifications\Source\Machine.Specifications\Utility\RandomExtensionMethods.cs:line 32
-   at Machine.Specifications.Utility.RandomExtensionMethods.Each[T](IEnumerable`1 enumerable, Action`1 action) in c:\Users\jp\repositories\github\machine.specifications\Source\Machine.Specifications\Utility\RandomExtensionMethods.cs:line 12
-   at Machine.Specifications.Utility.RandomExtensionMethods.InvokeAll(IEnumerable`1 actions) in c:\Users\jp\repositories\github\machine.specifications\Source\Machine.Specifications\Utility\RandomExtensionMethods.cs:line 32
-   at Machine.Specifications.Utility.RandomExtensionMethods.InvokeAll(IEnumerable`1 contextActions) in c:\Users\jp\repositories\github\machine.specifications\Source\Machine.Specifications\Utility\RandomExtensionMethods.cs:line 22
-   at Machine.Specifications.Model.Context.EstablishContext() in c:\Users\jp\repositories\github\machine.specifications\Source\Machine.Specifications\Model\Context.cs:line 76</pre>
 
 
 
@@ -284,59 +175,6 @@ div.supplement {
 
           </li><li class="spec"><a name="6">should run a command</a>
 
-  <div class="failure">
-    &lArr; FAILED
-    <ul class="prev-next">
-      <li class="failure"><a href="#5" title="Go to previous failed specification">&uArr;</a>
-      </li>
-      <li class="failure"><a href="#2" title="Go to next failed specification">&dArr;</a>
-      </li>
-    </ul>
-  </div>
-  <p class="exception_type">
-    TargetInvocationException
-  </p>
-  <pre class="exception_message">System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---&gt; System.ArgumentException: Unable to obtain public key for StrongNameKeyPair.
-   at System.Reflection.StrongNameKeyPair.nGetPublicKey(Boolean exported, Byte[] array, String container)
-   at System.Reflection.StrongNameKeyPair.get_PublicKey()
-   at System.AppDomain.InternalDefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access, String dir, Evidence evidence, PermissionSet requiredPermissions, PermissionSet optionalPermissions, PermissionSet refusedPermissions, StackCrawlMark&amp; stackMark, IEnumerable`1 unsafeAssemblyAttributes)
-   at System.AppDomain.DefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access)
-   at Castle.DynamicProxy.ModuleScope.CreateModule(Boolean signStrongName)
-   at Castle.DynamicProxy.ModuleScope.ObtainDynamicModuleWithStrongName()
-   at Castle.DynamicProxy.ModuleScope.ObtainDynamicModule(Boolean isStrongNamed)
-   at Castle.DynamicProxy.Generators.Emitters.ClassEmitter.CreateTypeBuilder(ModuleScope modulescope, String name, Type baseType, Type[] interfaces, TypeAttributes flags, Boolean forceUnsigned)
-   at Castle.DynamicProxy.Generators.Emitters.ClassEmitter..ctor(ModuleScope modulescope, String name, Type baseType, Type[] interfaces, TypeAttributes flags, Boolean forceUnsigned)
-   at Castle.DynamicProxy.Generators.Emitters.ClassEmitter..ctor(ModuleScope modulescope, String name, Type baseType, Type[] interfaces, TypeAttributes flags)
-   at Castle.DynamicProxy.Generators.Emitters.ClassEmitter..ctor(ModuleScope modulescope, String name, Type baseType, Type[] interfaces)
-   at Castle.DynamicProxy.Generators.BaseProxyGenerator.BuildClassEmitter(String typeName, Type parentType, Type[] interfaces)
-   at Castle.DynamicProxy.Generators.BaseProxyGenerator.BuildClassEmitter(String typeName, Type parentType, IList interfaceList)
-   at Castle.DynamicProxy.Generators.InterfaceProxyWithTargetGenerator.GenerateCode(Type proxyTargetType, Type[] interfaces, ProxyGenerationOptions options)
-   at Castle.DynamicProxy.DefaultProxyBuilder.CreateInterfaceProxyTypeWithoutTarget(Type interfaceToProxy, Type[] additionalInterfacesToProxy, ProxyGenerationOptions options)
-   at Castle.DynamicProxy.ProxyGenerator.CreateInterfaceProxyTypeWithoutTarget(Type interfaceToProxy, Type[] additionalInterfacesToProxy, ProxyGenerationOptions options)
-   at Castle.DynamicProxy.ProxyGenerator.CreateInterfaceProxyWithoutTarget(Type interfaceToProxy, Type[] additionalInterfacesToProxy, ProxyGenerationOptions options, IInterceptor[] interceptors)
-   at Rhino.Mocks.MockRepository.MockInterface(CreateMockState mockStateFactory, Type type, Type[] extras)
-   at Rhino.Mocks.MockRepository.CreateMockObject(Type type, CreateMockState factory, Type[] extras, Object[] argumentsForConstructor)
-   at Rhino.Mocks.MockRepository.Stub(Type type, Object[] argumentsForConstructor)
-   at Rhino.Mocks.MockRepository.&lt;&gt;c__DisplayClass1`1.&lt;GenerateStub&gt;b__0(MockRepository repo)
-   at Rhino.Mocks.MockRepository.CreateMockInReplay[T](Func`2 createMock)
-   at Rhino.Mocks.MockRepository.GenerateStub[T](Object[] argumentsForConstructor)
-   at Machine.Specifications.DevelopWithPassion.Rhino.RhinoMocksMockFactory.create_stub[Dependency]() in c:\Users\jp\repositories\github\machine.specifications\Source\Machine.Specifications.DevelopWithPassion.Rhino\RhinoMocksMockFactory.cs:line 10
-   at Machine.Specifications.DevelopWithPassion.DefaultSystemUnterTestDependencyBuilder.the_dependency[Dependency]() in c:\Users\jp\repositories\github\machine.specifications\Source\Machine.Specifications.DevelopWithPassion\SystemUnderTestDependencyBuilder.cs:line 47
-   at Machine.Specifications.DevelopWithPassion.Observations.DefaultObservationContext`1.the_dependency[Dependency]() in c:\Users\jp\repositories\github\machine.specifications\Source\Machine.Specifications.DevelopWithPassion\Observations\ObservationContext.cs:line 110
-   at Machine.Specifications.DevelopWithPassion.Observations.DefaultObservationController`3.the_dependency[Dependency]() in c:\Users\jp\repositories\github\machine.specifications\Source\Machine.Specifications.DevelopWithPassion\Observations\ObservationController.cs:line 83
-   at Machine.Specifications.DevelopWithPassion.Observations.InstanceObservations`3.the_dependency[Dependency]() in c:\Users\jp\repositories\github\machine.specifications\Source\Machine.Specifications.DevelopWithPassion\Observations\InstanceObservations.cs:line 10
-   at nothinbutdotnetstore.specs.example.CalculatorSpecs.when_adding_two_numbers.&lt;.ctor&gt;b__12() in c:\Users\jp\repositories\github\nbdn_store\product\nothinbutdotnetstore.specs\example\CalculatorSpecs.cs:line 64
-   --- End of inner exception stack trace ---
-   at System.RuntimeMethodHandle._InvokeMethodFast(Object target, Object[] arguments, SignatureStruct&amp; sig, MethodAttributes methodAttributes, RuntimeTypeHandle typeOwner)
-   at System.RuntimeMethodHandle.InvokeMethodFast(Object target, Object[] arguments, Signature sig, MethodAttributes methodAttributes, RuntimeTypeHandle typeOwner)
-   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture, Boolean skipVisibilityChecks)
-   at System.Delegate.DynamicInvokeImpl(Object[] args)
-   at System.Delegate.DynamicInvoke(Object[] args)
-   at Machine.Specifications.Utility.RandomExtensionMethods.&lt;InvokeAll&gt;b__1(Delegate item) in c:\Users\jp\repositories\github\machine.specifications\Source\Machine.Specifications\Utility\RandomExtensionMethods.cs:line 32
-   at Machine.Specifications.Utility.RandomExtensionMethods.Each[T](IEnumerable`1 enumerable, Action`1 action) in c:\Users\jp\repositories\github\machine.specifications\Source\Machine.Specifications\Utility\RandomExtensionMethods.cs:line 12
-   at Machine.Specifications.Utility.RandomExtensionMethods.InvokeAll(IEnumerable`1 actions) in c:\Users\jp\repositories\github\machine.specifications\Source\Machine.Specifications\Utility\RandomExtensionMethods.cs:line 32
-   at Machine.Specifications.Utility.RandomExtensionMethods.InvokeAll(IEnumerable`1 contextActions) in c:\Users\jp\repositories\github\machine.specifications\Source\Machine.Specifications\Utility\RandomExtensionMethods.cs:line 22
-   at Machine.Specifications.Model.Context.EstablishContext() in c:\Users\jp\repositories\github\machine.specifications\Source\Machine.Specifications\Model\Context.cs:line 76</pre>
 
 
 
@@ -348,7 +186,20 @@ div.supplement {
 </h3>
 <h4 class="count">
   1 specification
-</h4><ul><li class="spec"><a name="8">should always be reusable</a>
+</h4><ul><li class="spec"><a name="11">should always be reusable</a>
+
+
+
+
+ 
+
+          </li>
+        </ul><h3 class="context">
+  when getting a command for a request and it does not have the command
+</h3>
+<h4 class="count">
+  1 specification
+</h4><ul><li class="spec"><a name="8">should return a missing command</a>
 
 
 
@@ -363,58 +214,6 @@ div.supplement {
   1 specification
 </h4><ul><li class="spec"><a name="2">should not throw a security exception</a>
 
-  <div class="failure">
-    &lArr; FAILED
-    <ul class="prev-next">
-      <li class="failure"><a href="#6" title="Go to previous failed specification">&uArr;</a>
-      </li>
-      <li class="failure"><a href="#3" title="Go to next failed specification">&dArr;</a>
-      </li>
-    </ul>
-  </div>
-  <p class="exception_type">
-    TargetInvocationException
-  </p>
-  <pre class="exception_message">System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---&gt; System.ArgumentException: Unable to obtain public key for StrongNameKeyPair.
-   at System.Reflection.StrongNameKeyPair.nGetPublicKey(Boolean exported, Byte[] array, String container)
-   at System.Reflection.StrongNameKeyPair.get_PublicKey()
-   at System.AppDomain.InternalDefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access, String dir, Evidence evidence, PermissionSet requiredPermissions, PermissionSet optionalPermissions, PermissionSet refusedPermissions, StackCrawlMark&amp; stackMark, IEnumerable`1 unsafeAssemblyAttributes)
-   at System.AppDomain.DefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access)
-   at Castle.DynamicProxy.ModuleScope.CreateModule(Boolean signStrongName)
-   at Castle.DynamicProxy.ModuleScope.ObtainDynamicModuleWithStrongName()
-   at Castle.DynamicProxy.ModuleScope.ObtainDynamicModule(Boolean isStrongNamed)
-   at Castle.DynamicProxy.Generators.Emitters.ClassEmitter.CreateTypeBuilder(ModuleScope modulescope, String name, Type baseType, Type[] interfaces, TypeAttributes flags, Boolean forceUnsigned)
-   at Castle.DynamicProxy.Generators.Emitters.ClassEmitter..ctor(ModuleScope modulescope, String name, Type baseType, Type[] interfaces, TypeAttributes flags, Boolean forceUnsigned)
-   at Castle.DynamicProxy.Generators.Emitters.ClassEmitter..ctor(ModuleScope modulescope, String name, Type baseType, Type[] interfaces, TypeAttributes flags)
-   at Castle.DynamicProxy.Generators.Emitters.ClassEmitter..ctor(ModuleScope modulescope, String name, Type baseType, Type[] interfaces)
-   at Castle.DynamicProxy.Generators.BaseProxyGenerator.BuildClassEmitter(String typeName, Type parentType, Type[] interfaces)
-   at Castle.DynamicProxy.Generators.BaseProxyGenerator.BuildClassEmitter(String typeName, Type parentType, IList interfaceList)
-   at Castle.DynamicProxy.Generators.InterfaceProxyWithTargetGenerator.GenerateCode(Type proxyTargetType, Type[] interfaces, ProxyGenerationOptions options)
-   at Castle.DynamicProxy.DefaultProxyBuilder.CreateInterfaceProxyTypeWithoutTarget(Type interfaceToProxy, Type[] additionalInterfacesToProxy, ProxyGenerationOptions options)
-   at Castle.DynamicProxy.ProxyGenerator.CreateInterfaceProxyTypeWithoutTarget(Type interfaceToProxy, Type[] additionalInterfacesToProxy, ProxyGenerationOptions options)
-   at Castle.DynamicProxy.ProxyGenerator.CreateInterfaceProxyWithoutTarget(Type interfaceToProxy, Type[] additionalInterfacesToProxy, ProxyGenerationOptions options, IInterceptor[] interceptors)
-   at Rhino.Mocks.MockRepository.MockInterface(CreateMockState mockStateFactory, Type type, Type[] extras)
-   at Rhino.Mocks.MockRepository.CreateMockObject(Type type, CreateMockState factory, Type[] extras, Object[] argumentsForConstructor)
-   at Rhino.Mocks.MockRepository.Stub(Type type, Object[] argumentsForConstructor)
-   at Rhino.Mocks.MockRepository.&lt;&gt;c__DisplayClass1`1.&lt;GenerateStub&gt;b__0(MockRepository repo)
-   at Rhino.Mocks.MockRepository.CreateMockInReplay[T](Func`2 createMock)
-   at Rhino.Mocks.MockRepository.GenerateStub[T](Object[] argumentsForConstructor)
-   at Machine.Specifications.DevelopWithPassion.Rhino.RhinoMocksMockFactory.create_stub[Dependency]() in c:\Users\jp\repositories\github\machine.specifications\Source\Machine.Specifications.DevelopWithPassion.Rhino\RhinoMocksMockFactory.cs:line 10
-   at Machine.Specifications.DevelopWithPassion.Observations.DefaultObservationContext`1.an[InterfaceType]() in c:\Users\jp\repositories\github\machine.specifications\Source\Machine.Specifications.DevelopWithPassion\Observations\ObservationContext.cs:line 90
-   at Machine.Specifications.DevelopWithPassion.Observations.DefaultObservationController`3.an[InterfaceType]() in c:\Users\jp\repositories\github\machine.specifications\Source\Machine.Specifications.DevelopWithPassion\Observations\ObservationController.cs:line 93
-   at Machine.Specifications.DevelopWithPassion.Observations.SupplementarySpecificationContext`3.an[InterfaceType]() in c:\Users\jp\repositories\github\machine.specifications\Source\Machine.Specifications.DevelopWithPassion\Observations\SupplementarySpecificationContext.cs:line 58
-   at nothinbutdotnetstore.specs.example.CalculatorSpecs.when_shutting_off_the_calculator_and_they_are__in_the_correct_role.&lt;.ctor&gt;b__0() in c:\Users\jp\repositories\github\nbdn_store\product\nothinbutdotnetstore.specs\example\CalculatorSpecs.cs:line 22
-   --- End of inner exception stack trace ---
-   at System.RuntimeMethodHandle._InvokeMethodFast(Object target, Object[] arguments, SignatureStruct&amp; sig, MethodAttributes methodAttributes, RuntimeTypeHandle typeOwner)
-   at System.RuntimeMethodHandle.InvokeMethodFast(Object target, Object[] arguments, Signature sig, MethodAttributes methodAttributes, RuntimeTypeHandle typeOwner)
-   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture, Boolean skipVisibilityChecks)
-   at System.Delegate.DynamicInvokeImpl(Object[] args)
-   at System.Delegate.DynamicInvoke(Object[] args)
-   at Machine.Specifications.Utility.RandomExtensionMethods.&lt;InvokeAll&gt;b__1(Delegate item) in c:\Users\jp\repositories\github\machine.specifications\Source\Machine.Specifications\Utility\RandomExtensionMethods.cs:line 32
-   at Machine.Specifications.Utility.RandomExtensionMethods.Each[T](IEnumerable`1 enumerable, Action`1 action) in c:\Users\jp\repositories\github\machine.specifications\Source\Machine.Specifications\Utility\RandomExtensionMethods.cs:line 12
-   at Machine.Specifications.Utility.RandomExtensionMethods.InvokeAll(IEnumerable`1 actions) in c:\Users\jp\repositories\github\machine.specifications\Source\Machine.Specifications\Utility\RandomExtensionMethods.cs:line 32
-   at Machine.Specifications.Utility.RandomExtensionMethods.InvokeAll(IEnumerable`1 contextActions) in c:\Users\jp\repositories\github\machine.specifications\Source\Machine.Specifications\Utility\RandomExtensionMethods.cs:line 22
-   at Machine.Specifications.Model.Context.EstablishContext() in c:\Users\jp\repositories\github\machine.specifications\Source\Machine.Specifications\Model\Context.cs:line 76</pre>
 
 
 
@@ -428,58 +227,24 @@ div.supplement {
   1 specification
 </h4><ul><li class="spec"><a name="3">should throw a security exception</a>
 
-  <div class="failure">
-    &lArr; FAILED
-    <ul class="prev-next">
-      <li class="failure"><a href="#2" title="Go to previous failed specification">&uArr;</a>
-      </li>
-      <li class="failure"><a href="#7" title="Go to next failed specification">&dArr;</a>
-      </li>
-    </ul>
-  </div>
-  <p class="exception_type">
-    TargetInvocationException
-  </p>
-  <pre class="exception_message">System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---&gt; System.ArgumentException: Unable to obtain public key for StrongNameKeyPair.
-   at System.Reflection.StrongNameKeyPair.nGetPublicKey(Boolean exported, Byte[] array, String container)
-   at System.Reflection.StrongNameKeyPair.get_PublicKey()
-   at System.AppDomain.InternalDefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access, String dir, Evidence evidence, PermissionSet requiredPermissions, PermissionSet optionalPermissions, PermissionSet refusedPermissions, StackCrawlMark&amp; stackMark, IEnumerable`1 unsafeAssemblyAttributes)
-   at System.AppDomain.DefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access)
-   at Castle.DynamicProxy.ModuleScope.CreateModule(Boolean signStrongName)
-   at Castle.DynamicProxy.ModuleScope.ObtainDynamicModuleWithStrongName()
-   at Castle.DynamicProxy.ModuleScope.ObtainDynamicModule(Boolean isStrongNamed)
-   at Castle.DynamicProxy.Generators.Emitters.ClassEmitter.CreateTypeBuilder(ModuleScope modulescope, String name, Type baseType, Type[] interfaces, TypeAttributes flags, Boolean forceUnsigned)
-   at Castle.DynamicProxy.Generators.Emitters.ClassEmitter..ctor(ModuleScope modulescope, String name, Type baseType, Type[] interfaces, TypeAttributes flags, Boolean forceUnsigned)
-   at Castle.DynamicProxy.Generators.Emitters.ClassEmitter..ctor(ModuleScope modulescope, String name, Type baseType, Type[] interfaces, TypeAttributes flags)
-   at Castle.DynamicProxy.Generators.Emitters.ClassEmitter..ctor(ModuleScope modulescope, String name, Type baseType, Type[] interfaces)
-   at Castle.DynamicProxy.Generators.BaseProxyGenerator.BuildClassEmitter(String typeName, Type parentType, Type[] interfaces)
-   at Castle.DynamicProxy.Generators.BaseProxyGenerator.BuildClassEmitter(String typeName, Type parentType, IList interfaceList)
-   at Castle.DynamicProxy.Generators.InterfaceProxyWithTargetGenerator.GenerateCode(Type proxyTargetType, Type[] interfaces, ProxyGenerationOptions options)
-   at Castle.DynamicProxy.DefaultProxyBuilder.CreateInterfaceProxyTypeWithoutTarget(Type interfaceToProxy, Type[] additionalInterfacesToProxy, ProxyGenerationOptions options)
-   at Castle.DynamicProxy.ProxyGenerator.CreateInterfaceProxyTypeWithoutTarget(Type interfaceToProxy, Type[] additionalInterfacesToProxy, ProxyGenerationOptions options)
-   at Castle.DynamicProxy.ProxyGenerator.CreateInterfaceProxyWithoutTarget(Type interfaceToProxy, Type[] additionalInterfacesToProxy, ProxyGenerationOptions options, IInterceptor[] interceptors)
-   at Rhino.Mocks.MockRepository.MockInterface(CreateMockState mockStateFactory, Type type, Type[] extras)
-   at Rhino.Mocks.MockRepository.CreateMockObject(Type type, CreateMockState factory, Type[] extras, Object[] argumentsForConstructor)
-   at Rhino.Mocks.MockRepository.Stub(Type type, Object[] argumentsForConstructor)
-   at Rhino.Mocks.MockRepository.&lt;&gt;c__DisplayClass1`1.&lt;GenerateStub&gt;b__0(MockRepository repo)
-   at Rhino.Mocks.MockRepository.CreateMockInReplay[T](Func`2 createMock)
-   at Rhino.Mocks.MockRepository.GenerateStub[T](Object[] argumentsForConstructor)
-   at Machine.Specifications.DevelopWithPassion.Rhino.RhinoMocksMockFactory.create_stub[Dependency]() in c:\Users\jp\repositories\github\machine.specifications\Source\Machine.Specifications.DevelopWithPassion.Rhino\RhinoMocksMockFactory.cs:line 10
-   at Machine.Specifications.DevelopWithPassion.Observations.DefaultObservationContext`1.an[InterfaceType]() in c:\Users\jp\repositories\github\machine.specifications\Source\Machine.Specifications.DevelopWithPassion\Observations\ObservationContext.cs:line 90
-   at Machine.Specifications.DevelopWithPassion.Observations.DefaultObservationController`3.an[InterfaceType]() in c:\Users\jp\repositories\github\machine.specifications\Source\Machine.Specifications.DevelopWithPassion\Observations\ObservationController.cs:line 93
-   at Machine.Specifications.DevelopWithPassion.Observations.SupplementarySpecificationContext`3.an[InterfaceType]() in c:\Users\jp\repositories\github\machine.specifications\Source\Machine.Specifications.DevelopWithPassion\Observations\SupplementarySpecificationContext.cs:line 58
-   at nothinbutdotnetstore.specs.example.CalculatorSpecs.when_shutting_off_the_calculator_and_they_are_not_in_the_correct_role.&lt;.ctor&gt;b__8() in c:\Users\jp\repositories\github\nbdn_store\product\nothinbutdotnetstore.specs\example\CalculatorSpecs.cs:line 43
-   --- End of inner exception stack trace ---
-   at System.RuntimeMethodHandle._InvokeMethodFast(Object target, Object[] arguments, SignatureStruct&amp; sig, MethodAttributes methodAttributes, RuntimeTypeHandle typeOwner)
-   at System.RuntimeMethodHandle.InvokeMethodFast(Object target, Object[] arguments, Signature sig, MethodAttributes methodAttributes, RuntimeTypeHandle typeOwner)
-   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture, Boolean skipVisibilityChecks)
-   at System.Delegate.DynamicInvokeImpl(Object[] args)
-   at System.Delegate.DynamicInvoke(Object[] args)
-   at Machine.Specifications.Utility.RandomExtensionMethods.&lt;InvokeAll&gt;b__1(Delegate item) in c:\Users\jp\repositories\github\machine.specifications\Source\Machine.Specifications\Utility\RandomExtensionMethods.cs:line 32
-   at Machine.Specifications.Utility.RandomExtensionMethods.Each[T](IEnumerable`1 enumerable, Action`1 action) in c:\Users\jp\repositories\github\machine.specifications\Source\Machine.Specifications\Utility\RandomExtensionMethods.cs:line 12
-   at Machine.Specifications.Utility.RandomExtensionMethods.InvokeAll(IEnumerable`1 actions) in c:\Users\jp\repositories\github\machine.specifications\Source\Machine.Specifications\Utility\RandomExtensionMethods.cs:line 32
-   at Machine.Specifications.Utility.RandomExtensionMethods.InvokeAll(IEnumerable`1 contextActions) in c:\Users\jp\repositories\github\machine.specifications\Source\Machine.Specifications\Utility\RandomExtensionMethods.cs:line 22
-   at Machine.Specifications.Model.Context.EstablishContext() in c:\Users\jp\repositories\github\machine.specifications\Source\Machine.Specifications\Model\Context.cs:line 76</pre>
+
+
+
+ 
+
+          </li>
+        </ul><h2 class="concern">
+  DefaultCommandRegistry specifications
+</h2>
+<h3 class="count">
+  1 context, 1 specification
+</h3><h3 class="context">
+  when getting a command for a request and it has the command
+</h3>
+<h4 class="count">
+  1 specification
+</h4><ul><li class="spec"><a name="7">should return the command that can handle the request</a>
+
 
 
 
@@ -496,34 +261,39 @@ div.supplement {
 </h3>
 <h4 class="count">
   1 specification
-</h4><ul><li class="spec"><a name="7">should delegate processing to the command for the request</a>
+</h4><ul><li class="spec"><a name="10">should delegate processing to the command for the request</a>
 
-  <div class="failure">
-    &lArr; FAILED
-    <ul class="prev-next">
-      <li class="failure"><a href="#3" title="Go to previous failed specification">&uArr;</a>
-      </li>
-      <li class="failure">
-      </li>
-    </ul>
-  </div>
-  <p class="exception_type">
-    TargetInvocationException
-  </p>
-  <pre class="exception_message">System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---&gt; System.NotImplementedException: The method or operation is not implemented.
-   at nothinbutdotnetstore.web.DefaultFrontController.process(Request request) in c:\Users\jp\repositories\github\nbdn_store\product\nothinbutdotnetstore\web\DefaultFrontController.cs:line 9
-   at nothinbutdotnetstore.specs.web.FrontControllerSpecs.when_processing_a_request.&lt;.ctor&gt;b__2() in c:\Users\jp\repositories\github\nbdn_store\product\nothinbutdotnetstore.specs\web\FrontControllerSpecs.cs:line 29
-   --- End of inner exception stack trace ---
-   at System.RuntimeMethodHandle._InvokeMethodFast(Object target, Object[] arguments, SignatureStruct&amp; sig, MethodAttributes methodAttributes, RuntimeTypeHandle typeOwner)
-   at System.RuntimeMethodHandle.InvokeMethodFast(Object target, Object[] arguments, Signature sig, MethodAttributes methodAttributes, RuntimeTypeHandle typeOwner)
-   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture, Boolean skipVisibilityChecks)
-   at System.Delegate.DynamicInvokeImpl(Object[] args)
-   at System.Delegate.DynamicInvoke(Object[] args)
-   at Machine.Specifications.Utility.RandomExtensionMethods.&lt;InvokeAll&gt;b__1(Delegate item) in c:\Users\jp\repositories\github\machine.specifications\Source\Machine.Specifications\Utility\RandomExtensionMethods.cs:line 32
-   at Machine.Specifications.Utility.RandomExtensionMethods.Each[T](IEnumerable`1 enumerable, Action`1 action) in c:\Users\jp\repositories\github\machine.specifications\Source\Machine.Specifications\Utility\RandomExtensionMethods.cs:line 12
-   at Machine.Specifications.Utility.RandomExtensionMethods.InvokeAll(IEnumerable`1 actions) in c:\Users\jp\repositories\github\machine.specifications\Source\Machine.Specifications\Utility\RandomExtensionMethods.cs:line 32
-   at Machine.Specifications.Utility.RandomExtensionMethods.InvokeAll(IEnumerable`1 becauseActions) in c:\Users\jp\repositories\github\machine.specifications\Source\Machine.Specifications\Utility\RandomExtensionMethods.cs:line 17
-   at Machine.Specifications.Model.Context.EstablishContext() in c:\Users\jp\repositories\github\machine.specifications\Source\Machine.Specifications\Model\Context.cs:line 77</pre>
+
+
+
+ 
+
+          </li>
+        </ul><h2 class="concern">
+  DefaultRequestCommand specifications
+</h2>
+<h3 class="count">
+  2 contexts, 2 specifications
+</h3><h3 class="context">
+  when determining whether it can process a request
+</h3>
+<h4 class="count">
+  1 specification
+</h4><ul><li class="spec"><a name="13">should make the determination by using its request specification</a>
+
+
+
+
+ 
+
+          </li>
+        </ul><h3 class="context">
+  when processing a request
+</h3>
+<h4 class="count">
+  1 specification
+</h4><ul><li class="spec"><a name="14">should delegate the processing to the application specific command</a>
+
 
 
 
@@ -540,7 +310,43 @@ div.supplement {
 </h3>
 <h4 class="count">
   1 specification
-</h4><ul><li class="spec"><a name="9">should delegate the processing of the request to the front controller</a>
+</h4><ul><li class="spec"><a name="12">should delegate the processing of the request to the front controller</a>
+
+
+
+
+ 
+
+          </li>
+        </ul><h2 class="concern">
+  ViewMainDepartments specifications
+</h2>
+<h3 class="count">
+  1 context, 1 specification
+</h3><h3 class="context">
+  when viewing the main departments
+</h3>
+<h4 class="count">
+  1 specification
+</h4><ul><li class="spec"><a name="15">should render the list of main departments</a>
+
+
+
+
+ 
+
+          </li>
+        </ul><h2 class="concern">
+  ViewSubDpartmentsSpecs specifications
+</h2>
+<h3 class="count">
+  1 context, 1 specification
+</h3><h3 class="context">
+  when viewing the sub departments in a main department
+</h3>
+<h4 class="count">
+  1 specification
+</h4><ul><li class="spec"><a name="9">should render the list of sub departments</a>
 
 
 
