@@ -13,9 +13,9 @@ namespace nothinbutdotnetstore.web.core.stubs
 
         public IEnumerator<RequestCommand> GetEnumerator()
         {
-            yield return new DefaultRequestCommand(x => x.command.Contains("ViewMainDepartments"), new ViewMainDepartments());
             yield return new DefaultRequestCommand(x => x.command.Contains("ViewSubDepartments"), new ViewSubDepartmentsInADepartment());
             yield return new DefaultRequestCommand(x => x.command.Contains("ViewProducts"), new ViewProductsInADepartment());
+            yield return new DefaultRequestCommand(x => true, new ViewMainDepartments());
         }
     }
 }

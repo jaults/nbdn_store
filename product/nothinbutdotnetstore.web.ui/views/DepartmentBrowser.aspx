@@ -12,12 +12,12 @@ Inherits="System.Web.UI.Page" MasterPageFile="Store.master" %>
                 <td>
                     <% if (department.has_sub_departments)
                        {%>
-                    <a href="ViewSubDepartments?d=<%= department.name %>"><%=department.name%></a>
+                    <a href="/dept.store/ViewSubDepartments?d=<%= department.name %>"><%=department.name%></a>
                     <%
                         }
                        else
 {%>
-                    <a href="ViewProducts?d=<%= department.name %>"><%=department.name%></a>
+                    <a href="/dept.store/ViewProducts?d=<%= department.name %>"><%=department.name%></a>
 <%
 }%>
                 </td>
