@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{922EF2FE-820B-4ED5-9D64-7D716E135719}</ProjectGuid>
     <OutputType>Library</OutputType>
@@ -64,8 +64,9 @@
   <ItemGroup>
     <Compile Include="DefaultCalculator.cs" />
     <Compile Include="MessageGenerator.cs" />
-    <Compile Include="web\application\catalogbrowsing\Department.cs" />
-    <Compile Include="web\application\catalogbrowsing\IDeparmentsRepository.cs" />
+    <Compile Include="model\Department.cs" />
+    <Compile Include="tasks\DeparmentsRepository.cs" />
+    <Compile Include="tasks\stubs\StubDepartmentRepository.cs" />
     <Compile Include="web\application\catalogbrowsing\ViewMainDepartments.cs" />
     <Compile Include="web\core\ApplicationCommand.cs" />
     <Compile Include="web\core\CommandRegistry.cs" />
@@ -79,6 +80,10 @@
     <Compile Include="web\core\RequestCommand.cs" />
     <Compile Include="web\core\RequestCriteria.cs" />
     <Compile Include="web\core\RequestFactory.cs" />
+    <Compile Include="web\core\ResponseEngine.cs" />
+    <Compile Include="web\core\stubs\StubRequestFactory.cs" />
+    <Compile Include="web\core\stubs\StubResponseEngine.cs" />
+    <Compile Include="web\core\stubs\StubSetOfCommands.cs" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">

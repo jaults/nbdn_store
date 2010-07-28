@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using nothinbutdotnetstore.web.core.stubs;
 
 namespace nothinbutdotnetstore.web.core
 {
@@ -10,6 +11,10 @@ namespace nothinbutdotnetstore.web.core
         public DefaultCommandRegistry(IEnumerable<RequestCommand> commands)
         {
             this.commands = commands;
+        }
+
+        public DefaultCommandRegistry():this(new StubSetOfCommands())
+        {
         }
 
         public RequestCommand get_command_that_can_handle(Request request)
