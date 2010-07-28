@@ -11,7 +11,7 @@ namespace nothinbutdotnetstore.web
 
         public bool can_process(Request request)
         {
-            throw new NotImplementedException();
+            return true;
         }
     }
 }
