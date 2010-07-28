@@ -65,9 +65,12 @@
     <Compile Include="DefaultCalculator.cs" />
     <Compile Include="MessageGenerator.cs" />
     <Compile Include="model\Department.cs" />
+    <Compile Include="model\Product.cs" />
     <Compile Include="tasks\DeparmentsRepository.cs" />
+    <Compile Include="tasks\ProductRepository.cs" />
     <Compile Include="tasks\stubs\StubDepartmentRepository.cs" />
     <Compile Include="web\application\catalogbrowsing\ViewMainDepartments.cs" />
+    <Compile Include="web\application\catalogbrowsing\ViewProductsInADepartment.cs" />
     <Compile Include="web\application\catalogbrowsing\ViewSubDepartmentsInADepartment.cs" />
     <Compile Include="web\core\ApplicationCommand.cs" />
     <Compile Include="web\core\CommandRegistry.cs" />
