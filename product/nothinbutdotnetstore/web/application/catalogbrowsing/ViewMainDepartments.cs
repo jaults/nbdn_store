@@ -10,7 +10,7 @@ namespace nothinbutdotnetstore.web.application.catalogbrowsing
         CatalogBrowsingTasks catalog_browsing_tasks;
         ResponseEngine response_engine;
 
-        public ViewMainDepartments():this(new StubDepartmentRepository(),
+        public ViewMainDepartments():this(new StubCatalogBrowsingTasks(),
             new StubResponseEngine())
         {
         }

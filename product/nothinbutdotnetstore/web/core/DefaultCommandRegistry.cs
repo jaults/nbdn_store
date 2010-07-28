@@ -13,7 +13,7 @@ namespace nothinbutdotnetstore.web.core
             this.commands = commands;
         }
 
-        public DefaultCommandRegistry():this(new StubSetOfCommands())
+        public DefaultCommandRegistry() : this(new StubSetOfCommands())
         {
         }
 

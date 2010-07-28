@@ -1,7 +1,9 @@
 using System;
 using nothinbutdotnetstore.model;
 using nothinbutdotnetstore.tasks;
+using nothinbutdotnetstore.tasks.stubs;
 using nothinbutdotnetstore.web.core;
+using nothinbutdotnetstore.web.core.stubs;
 
 namespace nothinbutdotnetstore.web.application.catalogbrowsing
 {
@@ -10,7 +12,12 @@ namespace nothinbutdotnetstore.web.application.catalogbrowsing
         ResponseEngine response_engine;
         CatalogBrowsingTasks repository;
 
-        public ViewProductsInADepartment(ResponseEngine responseEngine, CatalogBrowsingTasks repository)
+        public ViewProductsInADepartment() : this(new StubCatalogBrowsingTasks(), new StubResponseEngine())
+        {
+            
+        }
+
+        public ViewProductsInADepartment(CatalogBrowsingTasks repository, ResponseEngine responseEngine)
         {
             response_engine = responseEngine;
             this.repository = repository;
