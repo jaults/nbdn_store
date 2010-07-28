@@ -25,8 +25,7 @@ namespace nothinbutdotnetstore.web.application.catalogbrowsing
 
         public void process(Request request)
         {
-            Department department = request.get_main_department();
-            response_engine.display(deparments_repository.get_the_sub_departments(department));
+            response_engine.display(deparments_repository.get_the_sub_departments_in(request.map<Department>()));
         }
     }
 }

@@ -9,14 +9,14 @@ using Rhino.Mocks;
 
 namespace nothinbutdotnetstore.specs.web
 {
-    public class ViewSubDpartmentsSpecs
+    public class ViewSubDpartmentsInADepartmentSpecs
     {
         public abstract class concern : Observes<ApplicationCommand,
                                             ViewSubDepartmentsInADepartment>
         {
         }
 
-        [Subject(typeof(ViewSubDpartmentsSpecs))]
+        [Subject(typeof(ViewSubDpartmentsInADepartmentSpecs))]
         public class when_viewing_the_sub_departments_in_a_main_department : concern
         {
             Establish c = () =>
@@ -27,8 +27,8 @@ namespace nothinbutdotnetstore.specs.web
                 deparments_repository = the_dependency<DeparmentsRepository>();
                 sub_departments = new List<Department>();
                 main_department = new Department();
-                request.Stub(x => x.get_main_department()).Return(main_department);
-                deparments_repository.Stub(x => x.get_the_sub_departments(main_department)).Return(sub_departments);
+                request.Stub(x => x.map<Department>()).Return(main_department);
+                deparments_repository.Stub(x => x.get_the_sub_departments_in(main_department)).Return(sub_departments);
             };
 
             Because b = () =>

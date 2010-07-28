@@ -1,6 +1,5 @@
 using System;
 using System.Web;
-using nothinbutdotnetstore.model;
 
 namespace nothinbutdotnetstore.web.core.stubs
 {
@@ -13,9 +12,9 @@ namespace nothinbutdotnetstore.web.core.stubs
 
         class StubRequest : Request
         {
-            public Department get_main_department()
+            public InputModel map<InputModel>()
             {
-                return new Department();
+                throw new NotImplementedException();
             }
         }
     }
