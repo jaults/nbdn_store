@@ -2,7 +2,7 @@ using System;
 
 namespace nothinbutdotnetstore.web
 {
-    public class MissingRequestCommand : RequestCommand
+    public class DefaultRequestCommand : RequestCommand
     {
         public void process(Request request)
         {
@@ -11,7 +11,7 @@ namespace nothinbutdotnetstore.web
 
         public bool can_process(Request request)
         {
-            return false;
+            throw new NotImplementedException();
         }
     }
 }
