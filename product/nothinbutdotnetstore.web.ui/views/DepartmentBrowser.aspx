@@ -11,6 +11,10 @@ CodeFile="DepartmentBrowser.aspx.cs"%>
             <% foreach (var department in this.display_model) { %>
             <tr class="ListItem">
                 <td>
+department.has(sub_department).show(LinkBuilder<Department>.buildLink))
+department.has(products).show(LinkBuilder<Product>.buildLink)
+
+LinkBuilder<Department>.build(sub_department).build(product)
 
 
                                           .when(x => !x.has_sub_departments, "ViewProducts")
