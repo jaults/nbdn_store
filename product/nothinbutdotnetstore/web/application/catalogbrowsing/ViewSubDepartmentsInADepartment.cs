@@ -12,7 +12,7 @@ namespace nothinbutdotnetstore.web.application.catalogbrowsing
         ResponseEngine response_engine;
 
         public ViewSubDepartmentsInADepartment()
-            : this(new StubCatalogBrowsingTasks(), new StubResponseEngine())
+            : this(new StubCatalogBrowsingTasks(), new DefaultResponseEngine())
         {
         }
 

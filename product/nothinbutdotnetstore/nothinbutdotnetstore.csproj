@@ -75,9 +75,15 @@
     <Compile Include="web\application\catalogbrowsing\ViewSubDepartmentsInADepartment.cs" />
     <Compile Include="web\core\ApplicationCommand.cs" />
     <Compile Include="web\core\CommandRegistry.cs" />
+    <Compile Include="web\core\CurrentContextResolver.cs" />
     <Compile Include="web\core\DefaultCommandRegistry.cs" />
     <Compile Include="web\core\DefaultFrontController.cs" />
     <Compile Include="web\core\DefaultRequestCommand.cs" />
+    <Compile Include="web\core\DefaultResponseEngine.cs" />
+    <Compile Include="web\core\DefaultViewFor.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\core\DefaultViewRegistry.cs" />
     <Compile Include="web\core\FrontController.cs" />
     <Compile Include="web\core\MissingRequestCommand.cs" />
     <Compile Include="web\core\RawHandler.cs" />
@@ -87,8 +93,13 @@
     <Compile Include="web\core\RequestFactory.cs" />
     <Compile Include="web\core\ResponseEngine.cs" />
     <Compile Include="web\core\stubs\StubRequestFactory.cs" />
-    <Compile Include="web\core\stubs\StubResponseEngine.cs" />
     <Compile Include="web\core\stubs\StubSetOfCommands.cs" />
+    <Compile Include="web\core\stubs\StubViewPathRegistry.cs" />
+    <Compile Include="web\core\TheViewFactory.cs" />
+    <Compile Include="web\core\View.cs" />
+    <Compile Include="web\core\ViewFactory.cs" />
+    <Compile Include="web\core\ViewPathRegistry.cs" />
+    <Compile Include="web\core\ViewRegistry .cs" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">

@@ -1,13 +1,14 @@
 <%@ MasterType VirtualPath="Store.master" %>
 <%@ Page Language="C#" AutoEventWireup="true" 
-Inherits="System.Web.UI.Page" MasterPageFile="Store.master" %>
+Inherits="nothinbutdotnetstore.web.ui.views.DepartmentBrowser" MasterPageFile="Store.master" 
+CodeFile="DepartmentBrowser.aspx.cs"%>
 <%@ Import Namespace="System.Collections.Generic" %>
 <%@ Import Namespace="nothinbutdotnetstore.model" %>
 <asp:Content ID="content" runat="server" ContentPlaceHolderID="childContentPlaceHolder">
     <p class="ListHead">Select An Department</p>
 
             <table>            
-            <% foreach (var department in ((IEnumerable<Department>)Context.Items["blah"])) { %>
+            <% foreach (var department in this.display_model) { %>
             <tr class="ListItem">
                 <td>
                     <% if (department.has_sub_departments)

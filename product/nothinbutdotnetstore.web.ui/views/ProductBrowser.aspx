@@ -1,5 +1,6 @@
 <%@ MasterType VirtualPath="Store.master" %>
-<%@ Page Language="c#" AutoEventWireup="true" Inherits="System.Web.UI.Page" MasterPageFile="Store.master" %>
+<%@ Page Language="c#" AutoEventWireup="true" Inherits="nothinbutdotnetstore.web.ui.views.ProductBrowser"
+CodeFile="ProductBrowser.aspx.cs" MasterPageFile="Store.master" %>
 <%@ Import Namespace="System.Collections.Generic" %>
 <%@ Import Namespace="nothinbutdotnetstore.model" %>
 
@@ -19,7 +20,7 @@
                     </tr>
                 </thead>
     
-                <% foreach (var product in ((IEnumerable<Product>)Context.Items["blah"]))
+                <% foreach (var product in this.display_model)
                 {%>
 
                 <tr class="nonShadedRow">                    
