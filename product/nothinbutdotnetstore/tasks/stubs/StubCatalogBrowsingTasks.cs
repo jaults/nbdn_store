@@ -35,7 +35,7 @@ namespace nothinbutdotnetstore.tasks.stubs
         }
 
 
-        private IEnumerable<ReturnType> get_collection_of<ReturnType>(int quantity, Func<int, ReturnType> creator)
+        private IEnumerable<ReturnType> get_collection_of<ReturnType>(int quantity, Func<ReturnType> creator)
         {
             return Enumerable.Range(1, quantity).Select(creator);
         }
