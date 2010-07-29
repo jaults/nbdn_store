@@ -1,0 +1,62 @@
+<h1>Request Handling</h1>
+
+<h2>RawHandler <a href="http://java.sun.com/blueprints/patterns/FrontController.html">[Front Controller]</a></h2>
+
+<ul>
+<li>Interface with ASP.Net mechanics</li>
+<li>Forward control to our front controller mechanism to process the actual work</li>
+</ul>
+
+
+<h2>FrontController <a href="http://martinfowler.com/eaaCatalog/gateway.html">[ Gateway ]</a></h2>
+
+<ul>
+<li>Finds and invokes the correct application behaviour using a registry of all the behaviours that are able to be performed.</li>
+</ul>
+
+
+<h2>CommandRegistry <a href="http://martinfowler.com/eaaCatalog/registry.html">[ Registry ]</a></h2>
+
+<ul>
+<li>Retrieves the correct command that can process the actual request</li>
+</ul>
+
+
+<h2>DefaultRequestCommand  <a href="http://mattberther.com/2005/03/25/the-specification-pattern-a-primer">[ Specification ]</a>,<a href="http://en.wikipedia.org/wiki/Visitor_pattern">[ Visitor ]</a></h2>
+
+<ul>
+<li>Determines if it can process a request and forwards control to the application specific behaviour if it can.</li>
+</ul>
+
+
+<h1>Request Processing</h1>
+
+<h2>ApplicationCommand <a href="http://en.wikipedia.org/wiki/Strategy_pattern">[ Strategy ]</a></h2>
+
+<ul>
+<li>There will be an implementation of this for each application specific behaviour</li>
+</ul>
+
+
+<h1>Response Processing</h1>
+
+<h2>ResponseEngine <a href="http://en.wikipedia.org/wiki/Strategy_pattern">[ Strategy ]</a></h2>
+
+<ul>
+<li>Render the view associated with the corresponding display model</li>
+</ul>
+
+
+<h2>ViewRegistry <a href="http://martinfowler.com/eaaCatalog/registry.html">[ Registry ]</a></h2>
+
+<ul>
+<li>Find the view associated with the display model</li>
+</ul>
+
+
+<h2>ViewPathRegistry <a href="http://martinfowler.com/eaaCatalog/registry.html">[ Registry ]</a></h2>
+
+<ul>
+<li>Find the view path associated with the display model</li>
+</ul>
+
