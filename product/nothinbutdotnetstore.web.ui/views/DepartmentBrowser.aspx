@@ -12,7 +12,7 @@ CodeFile="DepartmentBrowser.aspx.cs"%>
             <tr class="ListItem">
                 <td>
 
-                    <%= Link<Department>().when(x => x.has_sub_departments, "ViewSubDepartments")
+
                                           .when(x => !x.has_sub_departments, "ViewProducts")
                                           .render(department) %>
 

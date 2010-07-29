@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 
 namespace nothinbutdotnetstore.web.core
@@ -8,7 +7,7 @@ namespace nothinbutdotnetstore.web.core
     public class LinkBuilder<T>
     {
         Dictionary<Func<T, bool>, string> conditions;
-        
+
         public LinkBuilder()
         {
             conditions = new Dictionary<Func<T, bool>, string>();
@@ -20,15 +19,14 @@ namespace nothinbutdotnetstore.web.core
             return this;
         }
 
-
         public string render(T instance)
         {
-            StringBuilder builder = new StringBuilder();
+            var builder = new StringBuilder();
             builder.Append("/dept.store/");
 
             foreach (var condition in conditions)
             {
-                if(condition.Key(instance))
+                if (condition.Key(instance))
                 {
                     builder.Append(condition.Value);
                 }
@@ -36,6 +34,5 @@ namespace nothinbutdotnetstore.web.core
 
             return builder.ToString();
         }
-
     }
 }

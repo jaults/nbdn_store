@@ -57,7 +57,6 @@
     </Compile>
     <Compile Include="views\ProductBrowser.aspx.cs">
       <DependentUpon>ProductBrowser.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="views\Store.master.cs">
       <DependentUpon>Store.master</DependentUpon>
