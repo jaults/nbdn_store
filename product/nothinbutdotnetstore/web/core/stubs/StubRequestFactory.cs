@@ -1,8 +1,10 @@
 using System.Web;
+using nothinbutdotnetstore.infrastructure.categorization;
 using nothinbutdotnetstore.model;
 
 namespace nothinbutdotnetstore.web.core.stubs
 {
+    [Factory]
     public class StubRequestFactory : RequestFactory
     {
         public Request create_request_from(HttpContext http_context)

@@ -9,13 +9,9 @@ namespace nothinbutdotnetstore.tasks.stubs
     {
         public IEnumerable<Department> get_the_main_departments()
         {
-            var departments = Enumerable.Range(1, 10).Select(
-                x => new Department {name = x.ToString("Department 0"), has_sub_departments = true})
-                .Concat(
-                    Enumerable.Range(11, 10).Select(
-                        x => new Department {name = x.ToString("Department 0"), has_sub_departments = false}));
-            
-            return departments;
+            return
+                Enumerable.Range(1, 100).Select(
+                    x => new Department {name = x.ToString("Department 0"), has_sub_departments = x%2 == 0});
         }
 
         public IEnumerable<Product> get_products_for_department(Department department)

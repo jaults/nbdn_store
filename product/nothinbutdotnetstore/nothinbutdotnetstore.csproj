@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DefaultCalculator.cs" />
+    <Compile Include="infrastructure\categorization\FactoryAttribute.cs" />
     <Compile Include="MessageGenerator.cs" />
     <Compile Include="model\Department.cs" />
     <Compile Include="model\Product.cs" />
