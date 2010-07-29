@@ -11,6 +11,12 @@ CodeFile="DepartmentBrowser.aspx.cs"%>
             <% foreach (var department in this.display_model) { %>
             <tr class="ListItem">
                 <td>
+
+                    <%= Link<Department>().when(x => x.has_sub_departments, "ViewSubDepartments")
+                                          .when(x => !x.has_sub_departments, "ViewProducts")
+                                          .render(department) %>
+
+
                     <% if (department.has_sub_departments)
                        {%>
                     <a href="/dept.store/ViewSubDepartments?d=<%= department.name %>"><%=department.name%></a>

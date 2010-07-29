@@ -85,6 +85,7 @@
     </Compile>
     <Compile Include="web\core\DefaultViewRegistry.cs" />
     <Compile Include="web\core\FrontController.cs" />
+    <Compile Include="web\core\LinkBuilder.cs" />
     <Compile Include="web\core\MissingRequestCommand.cs" />
     <Compile Include="web\core\RawHandler.cs" />
     <Compile Include="web\core\Request.cs" />
